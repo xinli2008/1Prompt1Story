@@ -1,3 +1,9 @@
+---
+title: 1Prompt1Story
+app_file: app.py
+sdk: gradio
+sdk_version: 4.44.1
+---
 
 <h1 align="center">
   <!-- <br>
@@ -10,9 +16,15 @@
 
 <div align="center">
 
-[![demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Online_Demo-blue)]()&nbsp;
-[![arXiv](https://img.shields.io/badge/arXiv%20paper-2406.06525-b31b1b.svg)]()&nbsp;
-[![project page](https://img.shields.io/badge/Project_page-More_visualizations-green)]()&nbsp;
+<a href="https://github.com/byliutao/1Prompt1Story" style="display: inline-block;">
+    <img src="./resource/gradio.svg" alt="demo" style="height: 20px; vertical-align: middle;">
+</a>&nbsp;
+<a href="https://github.com/byliutao/1Prompt1Story" style="display: inline-block;">
+    <img src="https://img.shields.io/badge/arXiv%20paper-2406.06525-b31b1b.svg" alt="arXiv" style="height: 20px; vertical-align: middle;">
+</a>&nbsp;
+<a href="https://github.com/byliutao/1Prompt1Story" style="display: inline-block;">
+    <img src="https://img.shields.io/badge/Project_page-More_visualizations-green" alt="project page" style="height: 20px; vertical-align: middle;">
+</a>&nbsp;
 
 </div>
 
