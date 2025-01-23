@@ -1,15 +1,8 @@
----
-title: 1Prompt1Story
-app_file: app.py
-sdk: gradio
-sdk_version: 4.44.1
----
-
 <h1 align="center">
   <!-- <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
   <br> -->
-  🔥 One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt
+  🔥(ICLR 2025) One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt
   <br>
 </h1>
 
