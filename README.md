@@ -16,7 +16,7 @@ sdk_version: 4.44.1
 
 <div align="center">
 
-<a href="https://github.com/byliutao/1Prompt1Story" style="display: inline-block;">
+<a href="http://3090-v6.byliutao.xyz:7860" style="display: inline-block;">
     <img src="./resource/gradio.svg" alt="demo" style="height: 20px; vertical-align: middle;">
 </a>&nbsp;
 <a href="https://github.com/byliutao/1Prompt1Story" style="display: inline-block;">

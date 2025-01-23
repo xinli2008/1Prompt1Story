@@ -214,4 +214,4 @@ def gradio_interface():
 
 if __name__ == "__main__":
     demo = gradio_interface()
-    demo.launch(share=True)
+    demo.launch(share=True, server_name="3090-v6.byliutao.xyz")
