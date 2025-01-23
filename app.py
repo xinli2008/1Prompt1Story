@@ -188,7 +188,14 @@ def gradio_interface():
         output_gallery = gr.Image()
 
         # Buttons
-        generate_button = gr.Button("Generate Images")
+        generate_button = gr.Button("Generate Images (click me!)")
+        gr.Markdown(
+            """
+            <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin-top: 0px;">
+            Images will be generated one by one. Please be patient.
+            </div>
+            """,
+        )
         interrupt_button = gr.Button("Interrupt")
 
         def interrupt_generation():
@@ -214,4 +221,4 @@ def gradio_interface():
 
 if __name__ == "__main__":
     demo = gradio_interface()
-    demo.launch(share=True, server_name="3090-v6.byliutao.xyz")
+    demo.launch(server_name="3090-v6.byliutao.xyz")
