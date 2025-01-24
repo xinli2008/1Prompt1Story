@@ -80,9 +80,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If our work assists your research, feel free to give us a star ⭐ or cite us using:
 ```
 @inproceedings{
-anonymous2025onepromptonestory,
+liu2025onepromptonestory,
 title={One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt},
-author={Anonymous},
+author={Tao Liu and Kai Wang and Senmao Li and Joost van de Weijer and Fhad Khan and Shiqi Yang and Yaxing Wang and Jian Yang and Mingming Cheng},
 booktitle={The Thirteenth International Conference on Learning Representations},
 year={2025},
 url={https://openreview.net/forum?id=cD1kl2QKv1}
