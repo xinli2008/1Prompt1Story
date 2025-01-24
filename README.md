@@ -12,7 +12,7 @@
 <a href="http://3090-v6.byliutao.xyz:7860" style="display: inline-block;">
     <img src="./resource/gradio.svg" alt="demo" style="height: 20px; vertical-align: middle;">
 </a>&nbsp;
-<a href="https://arxiv.org/abs/%3CARXIV%20PAPER%20ID%3E" style="display: inline-block;">
+<a href="https://arxiv.org/abs/2501.13554" style="display: inline-block;">
     <img src="https://img.shields.io/badge/arXiv%20paper-2406.06525-b31b1b.svg" alt="arXiv" style="height: 20px; vertical-align: middle;">
 </a>&nbsp;
 <a href="https://byliutao.github.io/1Prompt1Story.github.io/" style="display: inline-block;">
