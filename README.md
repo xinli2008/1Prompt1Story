@@ -45,8 +45,6 @@
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
 ```bash
 # Clone this repository
 $ git clone https://github.com/byliutao/1Prompt1Story
@@ -74,10 +72,6 @@ $ python app.py
 $ python -m resource.gen_benchmark --save_dir ./result/benchmark --benchmark_path ./resource/consistory+.yaml
 ```
 
-> **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -85,5 +79,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Citation
 If our work assists your research, feel free to give us a star ⭐ or cite us using:
 ```
-arixv
+@inproceedings{
+anonymous2025onepromptonestory,
+title={One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt},
+author={Anonymous},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=cD1kl2QKv1}
+}
 ```
