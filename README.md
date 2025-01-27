@@ -9,7 +9,7 @@
 
 <div align="center">
 
-<a href="https://c5e9af216625826dc6.gradio.live" style="display: inline-block;">
+<a href="https://6fa51d96e439a20ceb.gradio.live/" style="display: inline-block;">
     <img src="./resource/gradio.svg" alt="demo" style="height: 20px; vertical-align: middle;">
 </a>&nbsp;
 <a href="https://arxiv.org/abs/2501.13554" style="display: inline-block;">
