@@ -28,7 +28,7 @@
   <a href="#visualization">Visualization</a> 
 </p>
 
-https://github.com/user-attachments/assets/83488f7f-fd26-40f5-b06e-ea5eb57db943
+[![Demo](./resource/demo.png)](./resource/photo.mp4)
 
 ## Key Features
 
@@ -88,18 +88,18 @@ url={https://openreview.net/forum?id=cD1kl2QKv1}
 
 ### Multi-Subject Generation
   <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
-    <img src="https://github.com/user-attachments/assets/39145a45-da08-4d05-8220-bf66a1de069c" alt="multi_subject" style="width: 100%;">
+    <img src="./resource/multi_subject.jpg" alt="multi_subject" style="width: 100%;">
   </figure>
 
 ### Comparison with Other Models
   <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
-    <img src="https://github.com/user-attachments/assets/16ee481c-5ad3-4921-bb55-ee9991a42f1e" alt="other_model" style="width: 100%;">
+    <img src="./resource/other_model.jpg" alt="other_model" style="width: 100%;">
   </figure>
 
 ### Long Story Image Generation
 <div align="center">
   <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
-    <img src="https://github.com/user-attachments/assets/26f6668f-6111-4566-93e8-c9b6e27ca2b7" alt="long_story" style="width: 100%;">
+    <img src="./resource/long_story.jpg" alt="long_story" style="width: 100%;">
   </figure>
 
 
