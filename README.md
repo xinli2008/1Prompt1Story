@@ -28,7 +28,7 @@
   <a href="#visualization">Visualization</a> 
 </p>
 
-[![Demo](./resource/demo.png)](./resource/photo.mp4)
+[![Demo](./resource/demo.png)](./resource/demo.png)
 
 ## Key Features
 
