@@ -28,10 +28,7 @@
   <a href="#visualization">Visualization</a> 
 </p>
 
-<p align="center">
-  <video src="./resource/photo.mp4" controls style="width: 100%; height: auto;"></video>
-</p>
-
+https://github.com/user-attachments/assets/83488f7f-fd26-40f5-b06e-ea5eb57db943
 
 ## Key Features
 
