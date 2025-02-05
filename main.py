@@ -73,19 +73,7 @@ if __name__ == "__main__":
     os.makedirs(save_dir, exist_ok=True)
 
     if args.json_path is None:
-        id_prompt = "A cinematic portrait of a man and a woman standing together"
-        frame_prompt_list = [
-                "under a sky full of stars",
-                "on a bustling city street at night",
-                "in a dimly lit jazz club",
-                "walking along a sandy beach at sunset",
-                "in a cozy coffee shop with large windows",
-                "in a vibrant art gallery surrounded by paintings",
-                "under an umbrella during a soft rain",
-                "on a quiet park bench amidst falling leaves",
-                "standing on a rooftop overlooking the city skyline"
-            ]
-        main(args.device, args.model_path, save_dir, id_prompt, frame_prompt_list, args.precision, args.seed, args.window_length)
+        main(args.device, args.model_path, save_dir, args.id_prompt, args.frame_prompt_list, args.precision, args.seed, args.window_length)
     else:
         import json
         with open(args.json_path, "r") as file:

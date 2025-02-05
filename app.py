@@ -221,5 +221,4 @@ def gradio_interface():
 
 if __name__ == "__main__":
     demo = gradio_interface()
-    # demo.launch(share=True,)
-    demo.launch(share=True, share_server_address="47.239.75.151:7000", share_server_protocol="http")
+    demo.launch()
