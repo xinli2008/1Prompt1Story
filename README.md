@@ -89,19 +89,21 @@ url={https://openreview.net/forum?id=cD1kl2QKv1}
 
 ## Visualization
 
+### Multi-Subject Generation
+  <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
+    <img src="https://github.com/user-attachments/assets/39145a45-da08-4d05-8220-bf66a1de069c" alt="multi_subject" style="width: 100%;">
+  </figure>
+
+### Comparison with Other Models
+  <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
+    <img src="https://github.com/user-attachments/assets/16ee481c-5ad3-4921-bb55-ee9991a42f1e" alt="other_model" style="width: 100%;">
+  </figure>
+
+### Long Story Image Generation
 <div align="center">
-  <figure style="display: inline-block; margin: 5px;">
-    <img src="https://github.com/user-attachments/assets/32ddfaf7-2aa1-4b94-a5b4-a5ee97d8bcf0" alt="long_story" style="width: 700px;">
-    <figcaption>Long Story Image Generation</figcaption>
+  <figure style="display: inline-block; margin: 20px; text-align: center; max-width: 700px;">
+    <img src="https://github.com/user-attachments/assets/26f6668f-6111-4566-93e8-c9b6e27ca2b7" alt="long_story" style="width: 100%;">
   </figure>
 
-  <figure style="display: inline-block; margin: 20px;">
-    <img src="https://github.com/user-attachments/assets/636636df-0b04-4235-8d41-098170705ae3" alt="other_model" style="width: 700px;">
-    <figcaption>Comparison with Other Models</figcaption>
-  </figure>
 
-  <figure style="display: inline-block; margin: 20px;">
-    <img src="https://github.com/user-attachments/assets/3436940c-8d04-40e1-8545-a608c6e4d681" alt="multi_subject" style="width: 700px;">
-    <figcaption>Multi-Subject Generation</figcaption>
-  </figure>
-</div>
+
