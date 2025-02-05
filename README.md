@@ -1,7 +1,4 @@
 <h1 align="center">
-  <!-- <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
-  <br> -->
   🔥(ICLR 2025) One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt
   <br>
 </h1>
@@ -27,11 +24,12 @@
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#license">License</a> •
-  <a href="#Citation">Citation</a> 
+  <a href="#citation">Citation</a> •
+  <a href="#visualization">Visualization</a> 
 </p>
 
 <p align="center">
-  <img src="./resource/photo.gif" alt="screenshot" />
+  <img src="./resource/photo.gif" alt="screenshot" style="width: 100%; height: auto;" />
 </p>
 
 
@@ -88,3 +86,22 @@ year={2025},
 url={https://openreview.net/forum?id=cD1kl2QKv1}
 }
 ```
+
+## Visualization
+
+<div align="center">
+  <figure style="display: inline-block; margin: 5px;">
+    <img src="https://github.com/user-attachments/assets/32ddfaf7-2aa1-4b94-a5b4-a5ee97d8bcf0" alt="long_story" style="width: 700px;">
+    <figcaption>Long Story Image Generation</figcaption>
+  </figure>
+
+  <figure style="display: inline-block; margin: 20px;">
+    <img src="https://github.com/user-attachments/assets/636636df-0b04-4235-8d41-098170705ae3" alt="other_model" style="width: 700px;">
+    <figcaption>Comparison with Other Models</figcaption>
+  </figure>
+
+  <figure style="display: inline-block; margin: 20px;">
+    <img src="https://github.com/user-attachments/assets/3436940c-8d04-40e1-8545-a608c6e4d681" alt="multi_subject" style="width: 700px;">
+    <figcaption>Multi-Subject Generation</figcaption>
+  </figure>
+</div>
