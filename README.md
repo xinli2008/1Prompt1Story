@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <img src="./resource/photo.gif" alt="screenshot" style="width: 100%; height: auto;" />
+  <video src="./resource/photo.mp4" controls style="width: 100%; height: auto;"></video>
 </p>
 
 
