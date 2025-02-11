@@ -1,5 +1,5 @@
 <h1 align="center">
-  🔥(ICLR 2025 Spotlight) One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt
+  🔥ICLR 2025 (Spotlight) One-Prompt-One-Story: Free-Lunch Consistent Text-to-Image Generation Using a Single Prompt
   <br>
 </h1>
 
