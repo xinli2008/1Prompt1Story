@@ -72,9 +72,11 @@ def ipca2(q, k, v, scale, unet_controller: Optional[UNetController] = None): # e
     else:
         unet_controller.ipca2_index += 1
 
+    # 如果Store_qkv为True，表示需要存储当前的k和v
     if unet_controller.Store_qkv is True:
 
         key = f"cross {unet_controller.current_time_step} {unet_controller.current_unet_position} {unet_controller.ipca2_index}"
+        # 将当前的k和v存储到unet_controller的k_store和v_store中
         unet_controller.k_store[key] = k
         unet_controller.v_store[key] = v
 
@@ -82,6 +84,7 @@ def ipca2(q, k, v, scale, unet_controller: Optional[UNetController] = None): # e
         attn_weights = torch.softmax(scores, dim=-1)
         attn_output = torch.matmul(attn_weights, v)
     else:
+        # 如果Store_qkv为False，表示不需要存储k和v
         # batch > 1
         if unet_controller.frame_prompt_express_list is not None:
             batch_size = q.size(0) // 2
@@ -101,10 +104,12 @@ def ipca2(q, k, v, scale, unet_controller: Optional[UNetController] = None): # e
                 k_store = unet_controller.k_store[key]
                 v_store = unet_controller.v_store[key]
 
+                # 将存储的q, k, v分为负样本和正样本
                 q_store_neg, q_store_pos = torch.split(q_store, q_store.size(0) // 2, dim=0)
                 k_store_neg, k_store_pos = torch.split(k_store, k_store.size(0) // 2, dim=0)
                 v_store_neg, v_store_pos = torch.split(v_store, v_store.size(0) // 2, dim=0)    
 
+                # 将当前的q, k, v与存储的q, k, v拼接
                 q_neg = torch.cat((q_neg_i, q_store_neg), dim=0)
                 q_pos = torch.cat((q_pos_i, q_store_pos), dim=0)
                 k_neg = torch.cat((k_neg_i, k_store_neg), dim=0)
@@ -112,6 +117,7 @@ def ipca2(q, k, v, scale, unet_controller: Optional[UNetController] = None): # e
                 v_neg = torch.cat((v_neg_i, v_store_neg), dim=0)
                 v_pos = torch.cat((v_pos_i, v_store_pos), dim=0)
 
+                # 将负样本和正样本拼接回完整的q, k, v
                 q_i = torch.cat((q_neg, q_pos), dim=0)
                 k_i = torch.cat((k_neg, k_pos), dim=0)
                 v_i = torch.cat((v_neg, v_pos), dim=0)
@@ -225,7 +231,7 @@ def load_pipe_from_path(model_path, device, torch_dtype, variant):
     return pipe, model_name
 
 
-def get_max_window_length(unet_controller: Optional[UNetController],id_prompt, frame_prompt_list):
+def get_max_window_length(unet_controller: Optional[UNetController], id_prompt, frame_prompt_list):
     single_long_prompt = id_prompt
     max_window_length = 0
     for index, movement in enumerate(frame_prompt_list):
@@ -240,7 +246,7 @@ def get_max_window_length(unet_controller: Optional[UNetController],id_prompt, f
 def movement_gen_story_slide_windows(id_prompt, frame_prompt_list, pipe, window_length, seed, unet_controller: Optional[UNetController], save_dir, verbose=True):  
     import os
     max_window_length = get_max_window_length(unet_controller,id_prompt,frame_prompt_list)
-    window_length = min(window_length,max_window_length)
+    window_length = min(window_length, max_window_length)
     if window_length < len(frame_prompt_list):
         movement_lists = circular_sliding_windows(frame_prompt_list, window_length)
     else:
@@ -368,10 +374,15 @@ def prompt2tokens(tokenizer, prompt):
 
 
 def punish_wight(tensor, latent_size, alpha=1.0, beta=1.2, calc_similarity=False):
+    r"""
+    SVR的核心函数，用于对提示词嵌入进行惩罚（weaken）或增强（strengthen）
+    """
+    # 对输入的tensor进行奇异值分解（SVD）
     u, s, vh = torch.linalg.svd(tensor)
     u = u[:,:latent_size]
     zero_idx = int(latent_size * alpha)
-
+    
+    # 如果需要计算相似性
     if calc_similarity:
         _s = s.clone()
         _s *= torch.exp(-alpha*_s) * beta
@@ -379,19 +390,21 @@ def punish_wight(tensor, latent_size, alpha=1.0, beta=1.2, calc_similarity=False
         _tensor = u @ torch.diag(_s) @ vh
         dist = cdist(tensor[:,0].unsqueeze(0).cpu(), _tensor[:,0].unsqueeze(0).cpu(), metric='cosine')
         print(f'The distance between the word embedding before and after the punishment: {dist}')
+    
+    # 对奇异值进行惩罚
     s *= torch.exp(-alpha*s) * beta
     tensor = u @ torch.diag(s) @ vh
     return tensor
 
 
-def swr_single_prompt_embeds(swr_words,prompt_embeds,prompt,tokenizer,alpha=1.0, beta=1.2, zero_eot=False):
+def swr_single_prompt_embeds(swr_words, prompt_embeds, prompt, tokenizer, alpha=1.0, beta=1.2, zero_eot=False):
     punish_indices = []
 
-    prompt_tokens = prompt2tokens(tokenizer,prompt)
+    prompt_tokens = prompt2tokens(tokenizer, prompt)
     
-    words_tokens = prompt2tokens(tokenizer,swr_words)
+    words_tokens = prompt2tokens(tokenizer, swr_words)
     words_tokens = [word for word in words_tokens if word != '<|endoftext|>' and word != '<|startoftext|>']
-    index_of_words = find_sublist_index(prompt_tokens,words_tokens)
+    index_of_words = find_sublist_index(prompt_tokens, words_tokens)
     
     if index_of_words != -1:
         punish_indices.extend([num for num in range(index_of_words, index_of_words+len(words_tokens))])
